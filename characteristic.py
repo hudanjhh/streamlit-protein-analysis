@@ -14,6 +14,13 @@ def get_uniprot_sequence(uniprot_id):
 def u_sequence(uni_seq):
     return(uni_seq.seq)
 
+#get the protein name
+def name(uni_seq):
+    header = uni_seq.description
+    protein_name = header.split("|")[2].split(" ")[0]
+    st.write('Protein Name: ', protein_name)
+    return protein_name
+
 # Calculate the length of the protein sequence
 def sequence_length(sequence):
     seq_length = len(sequence)
