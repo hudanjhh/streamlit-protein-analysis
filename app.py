@@ -8,7 +8,10 @@ from characteristic import *
 from ppi import *
 
 #title
-st.title("Protein Analysis")
+st.title("Protein Analysis using UniProt ID")
+
+if st.button("Use Protein Sequence as Input"):
+    st.switch_page("pages/proseq.py")
 
 #input for uniprot ID
 uniprot_id = st.text_input("Please insert the Uniprot ID")
