@@ -9,7 +9,7 @@ def retrieve_ppi(protein_name):
     string_url = "https://string-db.org/api/json/network"
     params = {
         "identifiers": protein_name,
-        "species": 9606 #homo sapiens
+        #"species": 9606 #homo sapiens
     }
     response = requests.get(string_url, params = params)
     data = response.json() #parse to json
